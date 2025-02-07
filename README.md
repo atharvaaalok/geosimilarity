@@ -2,11 +2,11 @@ Differentiable curve and surface similarity measures.
 
 ## Project Plan:
 - [x] Create first loss function. Mean Squared Error (MSE).
-- [ ] Generate proper documentation.
-    - [ ] Proper docstrings. Follow Google python coding style guide.
-    - [ ] Take inspiration from pytorch.
-    - [ ] Use math equations.
-    - [ ] Use type annotations.
+- [x] Generate proper documentation.
+    - [x] Proper docstrings. Follow Google python coding style guide.
+    - [x] Take inspiration from pytorch.
+    - [x] Use math equations.
+    - [x] Use type annotations.
 - [ ] Add testing code.
     - [ ] Use linear splines. Create spline generator function.
     - [ ] Create automated training function.
