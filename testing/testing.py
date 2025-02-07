@@ -1,8 +1,8 @@
 import torch
 
-from .utils import LinearSpline, plot_curves, automate_training
-from .shapes import square
-from ..geosimilarity import MSELoss
+from testing.utils import LinearSpline, plot_curves, automate_training
+from testing.shapes import square
+from geosimilarity import MSELoss
 
 
 # Get a target curve
