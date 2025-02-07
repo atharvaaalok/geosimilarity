@@ -62,13 +62,13 @@ def plot_curves(Xc: torch.Tensor, Xt: torch.Tensor):
 
 
 def automate_training(
-        spline: LinearSpline,
-        num_candidate_pts: int,
-        Xt: torch.Tensor,
-        loss_fn,
-        epochs: int = 1000,
-        print_cost_every: int = 200,
-        learning_rate: float = 0.001,
+    spline: LinearSpline,
+    num_candidate_pts: int,
+    Xt: torch.Tensor,
+    loss_fn,
+    epochs: int = 1000,
+    print_cost_every: int = 200,
+    learning_rate: float = 0.001,
 ) -> None:
     optimizer = torch.optim.Adam([spline.CP], lr = learning_rate)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor = 0.99)
