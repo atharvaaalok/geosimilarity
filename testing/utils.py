@@ -61,6 +61,33 @@ def plot_curves(Xc: torch.Tensor, Xt: torch.Tensor):
     plt.show()
 
 
+def automate_training(
+        spline: LinearSpline,
+        num_candidate_pts: int,
+        Xt: torch.Tensor,
+        loss_fn,
+        epochs: int = 1000,
+        print_cost_every: int = 200,
+        learning_rate: float = 0.001,
+) -> None:
+    optimizer = torch.optim.Adam([spline.CP], lr = learning_rate)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor = 0.99)
+
+    for epoch in range(epochs):
+        Y_model = spline(num_candidate_pts)
+        loss = loss_fn(Y_model, Xt)
+
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+        scheduler.step(loss.item())
+
+        if epoch == 0 or (epoch + 1) % print_cost_every == 0:
+            num_digits = len(str(epochs))
+            print(f'Epoch: [{epoch + 1:{num_digits}}/{epochs}]. Loss: {loss.item():11.6f}')
+    return 0
+
+
 if __name__ == '__main__':
     Xc = torch.rand(10, 2)
     Xt = torch.rand(10, 2)
