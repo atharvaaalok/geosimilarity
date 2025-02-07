@@ -7,6 +7,7 @@ Differentiable curve and surface similarity measures.
     - [x] Take inspiration from pytorch.
     - [x] Use math equations.
     - [x] Use type annotations.
+- [x] Add .gitignore file.
 - [ ] Add testing code.
     - [ ] Use linear splines. Create spline generator function.
     - [ ] Create automated training function.
