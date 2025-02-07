@@ -1,5 +1,7 @@
 import torch
+import torch.random
 from typing_extensions import Self
+import matplotlib.pyplot as plt
 
 
 class LinearSpline():
@@ -42,3 +44,24 @@ class LinearSpline():
 
     def __call__(self, num_pts: int) -> torch.Tensor:
         return self.generate(num_pts)
+
+
+def plot_curves(Xc, Xt):
+    # Get torch tensor to cpu and disable gradient tracking to plot using matplotlib
+    Xc = Xc.detach().cpu()
+    Xt = Xt.detach().cpu()
+    
+    plt.fill(Xt[:, 0], Xt[:, 1], color = "#C9C9F5", alpha = 0.46, label = "Target Curve")
+    plt.fill(Xc[:, 0], Xc[:, 1], color = "#F69E5E", alpha = 0.36, label = "Candidate Curve")
+
+    plt.plot(Xt[:, 0], Xt[:, 1], color = "#000000", linewidth = 2)
+    plt.plot(Xc[:, 0], Xc[:, 1], color = "#000000", linewidth = 2, linestyle = "--")
+
+    plt.axis('equal')
+    plt.show()
+
+
+if __name__ == '__main__':
+    Xc = torch.rand(10, 2)
+    Xt = torch.rand(10, 2)
+    plot_curves(Xc, Xt)
