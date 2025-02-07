@@ -46,7 +46,7 @@ class LinearSpline():
         return self.generate(num_pts)
 
 
-def plot_curves(Xc, Xt):
+def plot_curves(Xc: torch.Tensor, Xt: torch.Tensor):
     # Get torch tensor to cpu and disable gradient tracking to plot using matplotlib
     Xc = Xc.detach().cpu()
     Xt = Xt.detach().cpu()
