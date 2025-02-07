@@ -8,10 +8,10 @@ Differentiable curve and surface similarity measures.
     - [x] Use math equations.
     - [x] Use type annotations.
 - [x] Add .gitignore file.
-- [ ] Add testing code.
-    - [ ] Use linear splines. Create spline generator function.
-    - [ ] Create automated training function.
-    - [ ] Create plot function. Parameterized and Target shape comparison.
+- [x] Add testing code.
+    - [x] Use linear splines. Create spline generator function.
+    - [x] Create automated training function.
+    - [x] Create plot function. Parameterized and Target shape comparison.
     - [ ] Generate a bunch of target shapes. Use SVGs.
 - [ ] Create documentation first cut using MyST markdown.
     - [ ] Create motivation/introduction.
