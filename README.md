@@ -1,7 +1,7 @@
 Differentiable curve and surface similarity measures.
 
 ## Project Plan:
-- [ ] Create first loss function. Mean Squared Error (MSE).
+- [x] Create first loss function. Mean Squared Error (MSE).
 - [ ] Generate proper documentation.
     - [ ] Proper docstrings. Follow Google python coding style guide.
     - [ ] Take inspiration from pytorch.
