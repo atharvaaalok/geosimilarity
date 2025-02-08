@@ -10,7 +10,7 @@ class MSELoss(nn.Module):
     Given matrices for an input curve :math:`Xc`, and a target curve :math:`Xt` of same size
     :math:`N \times 2`, calculates:
     .. math:
-        L(Xc, Xt) = \frac{1}{N} \sum_{i = 0}^{N - 1}
+        L(Xc, Xt) = \frac{1}{2N} \sum_{i = 0}^{N - 1}
             \left( (Xc[i, 0] - Xt[i, 0])^2 + (Xc[i, 1] - Xt[i, 1])^2 \right)
     
     Args:
