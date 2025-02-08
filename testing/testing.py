@@ -19,7 +19,7 @@ plot_curves(Xc, Xt)
 
 
 # Choose a particular loss function
-loss_fn = LossClass(tau = 0.1)
+loss_fn = LossClass()
 
 # Train the spline control points to fit the target curve
 automate_training(spline, num_candidate_pts = Xt.shape[0], Xt = Xt, loss_fn = loss_fn,

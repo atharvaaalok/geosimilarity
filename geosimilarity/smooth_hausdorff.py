@@ -44,7 +44,7 @@ class SmoothHausdorffLoss(nn.Module):
         >>> output.backward()
     """
 
-    def __init__(self, tau: float = 1.0) -> None:
+    def __init__(self, tau: float = 0.1) -> None:
         super(SmoothHausdorffLoss, self).__init__()
         self.tau = tau
     
