@@ -1,0 +1,18 @@
+version: 1
+project:
+  title: Geometric Similarity Measures
+  date: 2025-02-07
+  jupyter: true
+  github: https://github.com/atharvaaalok/geosimilarity
+  authors:
+  - name: Atharva Aalok
+    email: atharvaaalok@gmail.com
+    corresponding: true
+    affiliations: Stanford University
+    twitter: atharvaaalok
+    github: atharvaaalok
+  toc:
+  - file: geometric_similarity_measures.md
+site:
+  template: book-theme
+  title: Curve Similarity Measures
