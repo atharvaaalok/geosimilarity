@@ -12,7 +12,7 @@ Differentiable curve and surface similarity measures.
     - [x] Use linear splines. Create spline generator function.
     - [x] Create automated training function.
     - [x] Create plot function. Parameterized and Target shape comparison.
-    - [ ] Generate a bunch of target shapes. Use SVGs.
+    - [x] Generate a bunch of target shapes. Use SVGs.
 - [ ] Create documentation first cut using MyST markdown.
     - [ ] Create motivation/introduction.
     - [ ] Include function docstrings in the documentation.

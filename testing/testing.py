@@ -1,12 +1,12 @@
 import torch
 
 from testing.utils import LinearSpline, plot_curves, automate_training
-from testing.shapes import square
+from testing.shapes import heart as shape_fn
 from geosimilarity import MSELoss
 
 
 # Get a target curve
-Xt = square(num_pts = 100)
+Xt = shape_fn(num_pts = 100)
 
 # Create a linear spline object
 spline = LinearSpline(num_control_pts = 50)
