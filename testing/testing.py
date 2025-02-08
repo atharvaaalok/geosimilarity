@@ -2,7 +2,7 @@ import torch
 
 from testing.utils import LinearSpline, plot_curves, automate_training
 from testing.shapes import square as shape_fn
-from geosimilarity import HausdorffLoss as LossClass
+from geosimilarity import SmoothHausdorffLoss as LossClass
 
 
 # Get a target curve
@@ -19,7 +19,7 @@ plot_curves(Xc, Xt)
 
 
 # Choose a particular loss function
-loss_fn = LossClass()
+loss_fn = LossClass(tau = 0.1)
 
 # Train the spline control points to fit the target curve
 automate_training(spline, num_candidate_pts = Xt.shape[0], Xt = Xt, loss_fn = loss_fn,
