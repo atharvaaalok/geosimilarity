@@ -2,7 +2,7 @@ import torch
 
 from testing.utils import LinearSpline, plot_curves, automate_training
 from testing.shapes import square as shape_fn
-from geosimilarity import SmoothHausdorffLoss as LossClass
+from geosimilarity import ChamferLoss as LossClass
 
 
 # Get a target curve
