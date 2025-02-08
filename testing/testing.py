@@ -1,8 +1,8 @@
 import torch
 
 from testing.utils import LinearSpline, plot_curves, automate_training
-from testing.shapes import heart as shape_fn
-from geosimilarity import MSELoss
+from testing.shapes import square as shape_fn
+from geosimilarity import MAELoss as LossClass
 
 
 # Get a target curve
@@ -19,7 +19,7 @@ plot_curves(Xc, Xt)
 
 
 # Choose a particular loss function
-loss_fn = MSELoss()
+loss_fn = LossClass()
 
 # Train the spline control points to fit the target curve
 automate_training(spline, num_candidate_pts = Xt.shape[0], Xt = Xt, loss_fn = loss_fn,
