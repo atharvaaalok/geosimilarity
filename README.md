@@ -14,7 +14,7 @@ Differentiable curve and surface similarity measures.
     - [x] Create plot function. Parameterized and Target shape comparison.
     - [x] Generate a bunch of target shapes. Use SVGs.
 - [ ] Create documentation first cut using MyST markdown.
-    - [ ] Create motivation/introduction.
+    - [x] Create motivation/introduction.
     - [ ] Include function docstrings in the documentation.
     - [ ] Launch web page for documentation using github pages.
 - [ ] Add license.
