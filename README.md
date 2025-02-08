@@ -17,4 +17,4 @@ Differentiable curve and surface similarity measures.
     - [x] Create motivation/introduction.
     - [ ] Include function docstrings in the documentation.
     - [ ] Launch web page for documentation using github pages.
-- [ ] Add license.
+- [x] Add license.
