@@ -1,4 +1,5 @@
 import torch
+from .shape_svg.svg_extract_xy import svg_extract_xy
 
 
 def circle(num_pts: int) -> torch.Tensor:
@@ -16,6 +17,15 @@ def square(num_pts: int) -> torch.Tensor:
     x_sq, y_sq = x/s, y/s
 
     X = torch.stack([x_sq, y_sq], dim = 1)
+    return X
+
+
+def stanford_bunny(num_pts: int) -> torch.Tensor:
+    X = svg_extract_xy('stanford_bunny.svg', num_pts = num_pts)
+    return X
+
+def heart(num_pts: int) -> torch.Tensor:
+    X = svg_extract_xy('heart.svg', num_pts = num_pts)
     return X
 
 
