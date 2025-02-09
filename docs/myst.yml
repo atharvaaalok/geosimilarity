@@ -15,7 +15,7 @@ project:
   - file: geometric_similarity_measures.md
 site:
   template: book-theme
-  title: Curve Similarity Measures
+  title: Geometric Similarity Measures
   options:
     favicon: assets/logos/favicon.svg
     logo: assets/logos/logo_text.svg
