@@ -1,6 +1,6 @@
 <div align="center">
     <picture>
-        <img alt="GeoSimilarity Logo with text on the side." src="https://raw.githubusercontent.com/atharvaaalok/geosimilarity/refs/heads/main/docs/assets/logos/logo_with_text_inside.svg" height="300px">
+        <img alt="GeoSimilarity Logo with text on the side." src="https://raw.githubusercontent.com/atharvaaalok/geosimilarity/refs/heads/main/docs/assets/logos/logo_with_text_inside.svg" width="50%">
     </picture>
 </div>
 
