@@ -63,5 +63,5 @@ Distributed under the [MIT License](License).
 - [ ] Create documentation first cut using MyST markdown.
     - [x] Create motivation/introduction.
     - [ ] Include function docstrings in the documentation.
-    - [ ] Launch web page for documentation using github pages.
+    - [x] Launch web page for documentation using github pages.
 - [x] Add license.
