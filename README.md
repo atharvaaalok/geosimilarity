@@ -11,6 +11,9 @@ modularity and extensibility in mind.
 > We are in the very early stages of development and are inviting domain experts for collaboration.
 > The usage examples below are stand-ins for future api.
 
+For a flavor of the documentation please refer:
+[Documentation Webpage](https://atharvaaalok.github.io/geosimilarity/)
+
 
 ## Basic Usage
 Given a candidate curve $Xc$ and a target curve $Xt$ we can measure the similarity using a given
