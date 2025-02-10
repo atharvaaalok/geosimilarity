@@ -1,3 +1,10 @@
+---
+title: Geometric Similarity Measures
+subtitle: An Introduction to Similarity Measures
+subject: A Motivation
+---
+
+
 # Geometric Similarity Measures
 
 

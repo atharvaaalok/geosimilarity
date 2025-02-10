@@ -1,6 +1,6 @@
 version: 1
 project:
-  title: Geometric Similarity Measures
+  title: GeoSimilarity
   date: 2025-02-07
   jupyter: true
   github: https://github.com/atharvaaalok/geosimilarity
@@ -12,10 +12,11 @@ project:
     twitter: atharvaaalok
     github: atharvaaalok
   toc:
+  - file: geosimilarity.md
   - file: geometric_similarity_measures.md
 site:
   template: book-theme
-  title: Geometric Similarity Measures
+  title: GeoSimilarity
   options:
     favicon: assets/logos/favicon.svg
     logo: assets/logos/logo_text.svg
