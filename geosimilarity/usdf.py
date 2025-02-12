@@ -98,10 +98,10 @@ def compute_unsigned_distance_field(X: Tensor, grid: Tensor) -> Tensor:
 
 if __name__ == '__main__':
     import matplotlib.pyplot as plt
-    from testing.shapes import square
+    from testing.shapes import stanford_bunny
 
     # Generate points on curve
-    X = square(num_pts = 100)
+    X = stanford_bunny(num_pts = 200)
 
     # Generate a grid
     x_min, y_min = torch.min(X, dim = 0)[0]
@@ -116,8 +116,10 @@ if __name__ == '__main__':
     # Plot the USDF
     x, y = grid[:, 0].reshape(grid_res, grid_res), grid[:, 1].reshape(grid_res, grid_res)
     z = usdf.reshape(grid_res, grid_res)
-    cs = plt.contourf(x, y, z)
-    plt.contour(cs, colors = 'k', linestyles = '--')
+    plt.plot(X[:, 0], X[:, 1], color = 'w', linewidth = 2)
+    cs = plt.contourf(x, y, z, cmap = plt.cm.hot, alpha = 0.6, levels = 10)
+    cn = plt.contour(cs, colors = 'k', linestyles = '-')
+    plt.clabel(cn, colors = 'k')
     plt.title("Unsigned Distance Field for unit square")
     plt.axis('equal')
     plt.show()
