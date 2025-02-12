@@ -2,7 +2,7 @@ import torch
 
 from testing.utils import LinearSpline, plot_curves, automate_training
 from testing.shapes import square as shape_fn
-from geosimilarity import ChamferLoss as LossClass
+from geosimilarity import USDFLoss as LossClass
 
 
 # Get a target curve
@@ -23,7 +23,7 @@ loss_fn = LossClass()
 
 # Train the spline control points to fit the target curve
 automate_training(spline, num_candidate_pts = Xt.shape[0], Xt = Xt, loss_fn = loss_fn,
-                  epochs = 1000, print_cost_every = 200, learning_rate = 0.001)
+                  epochs = 100, print_cost_every = 20, learning_rate = 0.01)
 
 # Plot and compare the fitted candidate and the target curves
 Xc = spline(num_pts = Xt.shape[0])
