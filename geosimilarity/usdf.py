@@ -51,6 +51,20 @@ class USDFLoss(nn.Module):
 
 
 def generate_grid(x_min: float, x_max: float, y_min: float, y_max: float, grid_res: int) -> Tensor:
+    r"""Generates a regular Cartesian grid of specified resolution given the coordinates of bounding
+    box.
+
+    Args:
+        x_min (float): minimum x for the grid bounding box.
+        x_max (float): maximum x for the grid bounding box.
+        y_min (float): minimum y for the grid bounding box.
+        y_max (float): maximum y for the grid bounding box.
+        grid_res (int): Grid resolution per dimension.
+    
+    Returns:
+        grid (Tensor): A matrix of dimensions (grid_res ** 2, 2) with coordinates of grid points in
+            each row (x, y).
+    """
     
     x_vals = torch.linspace(x_min, x_max, grid_res)
     y_vals = torch.linspace(y_min, y_max, grid_res)
@@ -61,6 +75,19 @@ def generate_grid(x_min: float, x_max: float, y_min: float, y_max: float, grid_r
 
 
 def compute_unsigned_distance_field(X: Tensor, grid: Tensor) -> Tensor:
+    """Computes the UnSigned Distance Field (USDF) for a given point set on a grid.
+
+    Args:
+        X (Tensor): A matrix of dimension (N, 2) with each row corresponding to the (x, y)
+            coordinates of specified point set.
+        grid (Tensor): A grid matrix of dimension (G, 2) with each row corresponding to the (x, y)
+            coordinates of grid points in space.
+    
+    Returns:
+        usdf (Tensor): An unsigned distance field matrix (G, 2) calculated at the grid points
+            specified.
+    """
+    
     # Compute pairwise distances (G, N)
     dists = torch.cdist(grid, X, p = 2)
     # Take the minimum distance to define the USDF

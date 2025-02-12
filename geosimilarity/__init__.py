@@ -6,3 +6,4 @@ from .smooth_max_sq_error import SmoothMaxSquaredErrorLoss
 from .hausdorff import HausdorffLoss
 from .smooth_hausdorff import SmoothHausdorffLoss
 from .chamfer import ChamferLoss
+from .usdf import USDFLoss
