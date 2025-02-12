@@ -93,3 +93,31 @@ def compute_unsigned_distance_field(X: Tensor, grid: Tensor) -> Tensor:
     # Take the minimum distance to define the USDF
     usdf = torch.min(dists, dim = 1)[0]
     return usdf
+
+
+
+if __name__ == '__main__':
+    import matplotlib.pyplot as plt
+    from testing.shapes import square
+
+    # Generate points on curve
+    X = square(num_pts = 100)
+
+    # Generate a grid
+    x_min, y_min = torch.min(X, dim = 0)[0]
+    x_max, y_max = torch.max(X, dim = 0)[0]
+    grid_res = 100
+    grid = generate_grid(x_min = x_min, x_max = x_max, y_min = y_min, y_max = y_max,
+                         grid_res = grid_res)
+
+    # Compute USDF values on the grid
+    usdf = compute_unsigned_distance_field(X, grid)
+
+    # Plot the USDF
+    x, y = grid[:, 0].reshape(grid_res, grid_res), grid[:, 1].reshape(grid_res, grid_res)
+    z = usdf.reshape(grid_res, grid_res)
+    cs = plt.contourf(x, y, z)
+    plt.contour(cs, colors = 'k', linestyles = '--')
+    plt.title("Unsigned Distance Field for unit square")
+    plt.axis('equal')
+    plt.show()
