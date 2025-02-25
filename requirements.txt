@@ -1,0 +1,5 @@
+matplotlib==3.10.0
+numpy==2.2.3
+svg.path==6.3
+torch==2.5.1
+typing_extensions==4.12.2
