@@ -1,7 +1,7 @@
 import torch
 
-from testing.utils import LinearSpline, plot_curves, automate_training
-from testing.shapes import square as shape_fn
+from utils import LinearSpline, plot_curves, automate_training
+from shapes import square as shape_fn
 from geosimilarity import USDFLoss as LossClass
 
 

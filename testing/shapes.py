@@ -1,5 +1,5 @@
 import torch
-from .shape_svg.svg_extract_xy import svg_extract_xy
+from shape_svg.svg_extract_xy import svg_extract_xy
 
 
 def circle(num_pts: int) -> torch.Tensor:
