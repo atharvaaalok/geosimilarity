@@ -1,2 +1,7 @@
 **/__pycache__/
 .DS_Store
+
+# Distribution/packaging
+build/
+*.egg-info/
+dist/
